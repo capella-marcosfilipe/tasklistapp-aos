@@ -4,10 +4,10 @@ import { atualizarTarefa, criarTarefa, deleteTarefa, listarTarefas, listarTarefa
 const router = Router();
 
 router
-  .get("/tarefas", listarTarefas)
-  .post("/tarefas", criarTarefa)
-  .get("/tarefas/:objectId", listarTarefasPorId)
-  .put("/tarefas/:objectId", atualizarTarefa)
-  .delete("/tarefas/:objectId", deleteTarefa)
+  .get("/", listarTarefas)           
+  .post("/", criarTarefa)            
+  .get("/:objectId", listarTarefasPorId)  
+  .put("/:objectId", atualizarTarefa)     
+  .delete("/:objectId", deleteTarefa); 
 
 export default router;
